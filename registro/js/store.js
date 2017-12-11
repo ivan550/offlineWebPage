@@ -8,10 +8,7 @@ function startDB() {
     console.log(postsDB.adapter);
     console.log("postsDB.adapter");
     loadAll();
-//    document.getElementById("delete").addEventListener("click", function(){
-//        console.log("hoi");
-//        
-//    });
+
 //    console.log(document.getElementById("delete").value);
     
 //        loadAll();
@@ -33,7 +30,7 @@ function add() {
     postsDB
             .put(inputData)
             .then(function (response) {
-                alert("Agregado con éxito");
+                alert("Agregado con Ã©xito");
                 /*Se recuperan todos los datos*/
                 loadAll();
                 sync();
@@ -83,7 +80,7 @@ function replicate() {
     remoteDB.replicate.to(postsDB).then(function (result) {
         // handle 'completed' result        
         loadAll();
-        alert("Replicación completada");
+        alert("ReplicaciÃ³n completada");
     }).catch(function (err) {
         console.log(err);
         loadAll();
@@ -95,7 +92,7 @@ function removeDoc(element) {
         return postsDB.remove(doc);
     }).then(function (result) {
         sync();
-        alert("Elemento borrado con éxito" + result);
+        alert("Elemento borrado con Ã©xito" + result);
     }).catch(function (err) {
         console.log(err);
     });
