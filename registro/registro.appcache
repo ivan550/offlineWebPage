@@ -1,0 +1,11 @@
+CACHE MANIFEST
+# v1 27-10-2017
+
+CACHE:
+index.html
+list.html
+css/stylesheet.css
+css/bootstrap.min.css
+js/pouchdb-6.3.4.min.js
+js/store.js
+img/off.gif

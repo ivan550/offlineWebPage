@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html manifest="registro.appcache" lang="en">  
+    <head>
+        <meta charset="utf-8">
+        <title>Progressive web application</title>
+        <link rel="stylesheet" href="css/bootstrap.min.css">
+        <link rel="stylesheet" href="css/stylesheet.css">
+    </head>
+    <body onload="startDB();">
+        <div class="container">
+            <div class="row main">
+                <div class="main-login main-center">
+                    <h2>Registro Posts</h2>
+                    <form action="list.html" method="post">
+                        <div class="form-group">
+                            <label for="titulo">Post Título</label>
+                            <input  class="form-control" id="titulo"  name="titulo">
+                        </div>
+                        <div class="form-group">
+                            <label >Descripción</label>
+                            <input  class="form-control" id="descripcion"  name="descripcion">
+                        </div>
+                        <div class="form-group">
+                            <label >Categoría:</label>
+                            <select class="form-control" id="categoria">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                        </div>
+                        <br>
+                        <div class="form-group">
+                            <label for="sel1">Usuario:</label>
+                            <select class="form-control" id="usuario">
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                            </select>
+                            <br>
+                        </div>
+                        <!--<button  onclick="add();">Submit</button>-->
+                        <!--<button  class="btn btn-default" >Submit</button>-->    
+                        <div  onclick="add();" align="center" class="btn btn-primary">SUBMIT:</div>    
+                    </form>
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="container">
+            <h2><a href="list.html">Lista de posts</a></h2>
+            <div class="table-responsive">          
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Título</th>
+                            <th>Descripción</th>
+                            <th>Categoría</th>
+                            <th>Usuario</th>
+                            <th>Acciones</th>
+                        </tr>
+                    </thead>
+                    <tbody id="elementsList">
+                        <tr>
+                            <td colspan="3">No hay elementos para mostrar</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>      
+
+        <script type="text/javascript" src="js/pouchdb-6.3.4.min.js"></script>
+        <script type="text/javascript" src="js/register-service-worker.js"></script>   
+        <script type="text/javascript" src="js/store.js"></script>
+
+    </body>
+</html>
+
+
+
